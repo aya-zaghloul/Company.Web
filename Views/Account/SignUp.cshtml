@@ -1,0 +1,40 @@
+﻿@using Company.Web.Models
+@model SignUpViewModel
+@{
+    ViewData["Title"] = "SignUp";
+    Layout = "~/Views/Shared/AuthenticationLayout.cshtml";
+}
+
+<h1>SignUp</h1>
+<div class="main-agileinfo">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="agileits-top">
+        <form asp-action="SignUp">
+            <input type="text" asp-for="FirstName" placeholder="First Name" required="" class="form-control" />
+            <input type="text" asp-for="LastName" placeholder="Last Name" required="" class="form-control" />
+            <input type="text" asp-for="Email" placeholder="Email" required="" class="form-control" />
+            <input type="password" asp-for="Password" placeholder="Password" required="" class="form-control" />
+            <input type="password" asp-for="ConfirmPassword" placeholder="Confirm Password" required="" class="form-control" />
+            
+            @* <div class="wthree-text">
+                <label class="anim">
+                    <input type="checkbox" required/>
+                    <span>I Agree To The Terms & Conditions</span>
+                </label>
+                <div class="clear"></div>
+            </div> *@
+
+            <input type="submit" value="SIGNUP" />
+        </form>
+
+        <p>Don't have an Account</p>
+
+    </div>
+
+</div>
+
+@* @section ValidationSection{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+} *@

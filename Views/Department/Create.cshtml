@@ -1,0 +1,22 @@
+﻿@model DepartmentDto
+
+<h1>Create New Department</h1>
+<br />
+<br />
+
+<form asp-action="Create">
+    <div class="form-groub">
+        <label class="col-form-label" asp-for="Code"></label>
+        <input type="text" asp-for="Code" class="form-control" />
+        <span asp-validation-for="Code" class="text-danger"></span>
+    </div>
+
+    <div class="form-groub">
+        <label class="col-form-label" asp-for="Name"></label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <input type="Submit" value="Create" class="btn-primary" />
+    <a asp-action="Index" class="btn btn-light">Back to List</a>
+</form>
